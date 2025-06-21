@@ -5,12 +5,11 @@ import '@mantine/core/styles.css';
 const Navbar = () => {
   return (
     <>
-        <Box w={'100%'} h={'5rem'}>
+        <Box bg={''} w={'100%'} h={'5rem'}>
             <Flex>
                 <Box>
-                    <h2 style={{fontFamily:''}}>MR GRAY'S</h2>
-                    <h5>TATTOO STUDIO</h5>
-                    {/* <img style={{width:'50px', height:'50px', borderRadius:'50%'}} src='logo.jpeg' alt="Mr gray's Tattoo studio logo" /> */}
+                    <h2 style={{fontFamily:'Graduate'}}>MR GRAY'S</h2>
+                    <h5  style={{fontFamily:'Asap condensed'}}>TATTOO STUDIO</h5>
                 </Box>
                 <Box w={'60%'} h={'100%'} >Navigation</Box>
                 <Box w={'20%'} h={'100%'}>Contact</Box>
