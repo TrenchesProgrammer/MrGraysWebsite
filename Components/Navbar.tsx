@@ -11,11 +11,12 @@ const Navbar = () => {
                     <h2 style={{fontFamily:'Graduate'}}>MR GRAY'S</h2>
                     <h5  style={{fontFamily:'Asap condensed'}}>TATTOO STUDIO</h5>
                 </Box>
-                <Flex  h={'65%'} w={'80%'} style={{borderRadius:'10px'}} ff={'Graduate'} gap={'20px'} align={'center'} bg={'#d9d9d9'}>
+                <Flex  h={'65%'} w={'80%'} style={{borderRadius:'10px'}} ff={'Graduate'} justify={'space-around'} gap={'40px'} align={'center'} bg={'#d9d9d9'}>
                   <Text >Home</Text>
                   <Text >Our Artists</Text>
-                  <Text >Navigation</Text>
-                  <Text >Contact</Text>                  
+                  <Text >Frequently Asked Quetions</Text>
+                  <Text >Contact</Text>        
+                  <button style={{backgroundColor:'black', color:'white', border:'none', borderRadius:'7px', padding:'5px'}}>Get Tattooed</button>          
                 </Flex>
 
             </Flex>
