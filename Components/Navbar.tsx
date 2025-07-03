@@ -14,7 +14,7 @@ const Navbar = () => {
                   <Text >Home</Text>
                   <Text >About</Text>
                   <Text >Our Artists</Text>
-                  <Text >Frequently Asked Quetions</Text>
+                  <Text >Frequently Asked Questions</Text>
                   <Text >Contact</Text>        
                   <button style={{backgroundColor:'black', color:'white', border:'none', borderRadius:'7px', padding:'5px'}}>Get Tattooed</button>          
                 </Flex>
