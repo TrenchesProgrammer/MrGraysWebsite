@@ -9,5 +9,38 @@
   height: 90vh;
   background-image: url('/tattoo-studio.svg');
   background-repeat: no-repeat;
-  /* background-color: azure; */
+}
+.navbar a{
+  text-decoration: none;
+  color: black;
+  position: relative;
+  padding: 0.1rem;
+}
+
+.navbar a:last-child{
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.navbar a:last-child:hover{
+  background-color: #333;
+  /* color: black; */
+  transition: background-color 0.3s ease;
+}
+.navbar a:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
 }

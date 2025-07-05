@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import "./globals.css";
+// import "./globals.css";
 import {MantineProvider} from "@mantine/core";
 import { Graduate} from 'next/font/google';
 

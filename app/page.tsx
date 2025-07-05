@@ -11,7 +11,7 @@ import Image from 'next/image';
 const archivoBlack = Archivo_Black({ weight: '400', subsets: ['latin'], display: 'swap' });
 
 const Page = () => {
-  return (
+  return (  
     <>
       <Navbar />
       <div
