@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
 import {MantineProvider} from "@mantine/core";
+import { Graduate, Archivo_Black, Asap_Condensed } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+const graduate = Graduate({ weight: '400', subsets: ['latin'], display: 'swap' });
+const archivoBlack = Archivo_Black({ weight: '400', subsets: ['latin'], display: 'swap' });
+const asapCondensed = Asap_Condensed({ weight: '400', subsets: ['latin'], display: 'swap' });
 export const metadata: Metadata = {
   title: "Mr Gray's Tattoo studio, custom award winig tattoos, near Houston.",
   description: "Mr Gray's Tattoo studio, Houston, Texas",
@@ -25,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${graduate.className} ${archivoBlack.className} ${asapCondensed.className}`}>
         <MantineProvider>
           {children}
         </MantineProvider>
