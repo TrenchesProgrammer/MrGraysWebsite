@@ -19,7 +19,7 @@ const Page = () => {
         className="hero"
       >
         <Flex align="center" justify="center" gap="md" pt="lg">
-          <img style={{ width: '150px' }} src="/five-star.svg" alt="" />
+          <Image width={100} height={50} src="/five-star.svg" alt="" />
           <Text>Trusted by 5000+ customers</Text>
         </Flex>
         <h1 className={archivoBlack.className} style={{ fontWeight: 'bolder', fontSize: '80px' }}>
