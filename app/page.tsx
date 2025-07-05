@@ -5,6 +5,7 @@ import Navbar from '../Components/Navbar';
 import '../app/globals.css';
 import { Flex, Text } from '@mantine/core';
 import { Archivo_Black } from 'next/font/google';
+import Image from 'next/image';
 
 // ✅ Re-import and initialize Archivo Black
 const archivoBlack = Archivo_Black({ weight: '400', subsets: ['latin'], display: 'swap' });
