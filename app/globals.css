@@ -27,7 +27,6 @@
 }
 .navbar a:last-child:hover{
   background-color: #333;
-  /* color: black; */
   transition: background-color 0.3s ease;
 }
 .navbar a:not(:last-child)::after {
