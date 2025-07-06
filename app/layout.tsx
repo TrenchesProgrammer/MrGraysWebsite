@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
+import { MantineProvider } from "@mantine/core";
+import { Graduate } from "next/font/google";
 
-// import "./globals.css";
-import {MantineProvider} from "@mantine/core";
-import { Graduate} from 'next/font/google';
-
-const graduate = Graduate({ weight: '400', subsets: ['latin'], display: 'swap' });
+const graduate = Graduate({ weight: "400", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Mr Gray's Tattoo studio, custom award winig tattoos, near Houston.",
   description: "Mr Gray's Tattoo studio, Houston, Texas",
+  viewport: "width=device-width, initial-scale=1", 
 };
 
 export default function RootLayout({
@@ -18,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${graduate.className} `}>
+      <body className={graduate.className}>
         <MantineProvider>
           {children}
         </MantineProvider>

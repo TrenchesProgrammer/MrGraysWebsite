@@ -15,11 +15,11 @@ const Page = () => {
     <>
       <Navbar />
       <div
-        style={{ display: 'flex', flexDirection: 'column',  alignItems: 'center', position:'relative', width: '100%', height: '87.3vh' }}
+        style={{ display: 'flex', flexDirection: 'column',  alignItems: 'center', position:'relative', width: '100%', height: '87.3vh', border:'1px solid black' }}
         className="hero"
 
       >
-        <Image style={{position:'absolute', zIndex:'-1', objectFit:'cover'}}  fill priority src='/tattoo-studio.svg' alt="mr gray's tattoo website background"/>
+        <Image style={{position:'absolute', zIndex:'-1', objectFit:'cover'}}  fill priority src='/tattoo-studio.webp' alt="mr gray's tattoo website background"/>
         <Flex align="center" justify="center" gap="md" pt="lg">
           <Image width={100} height={50} src="/five-star.svg" alt="mr gray's tattoo website 5 star" />
           <Text>Trusted by 5000+ customers</Text>
