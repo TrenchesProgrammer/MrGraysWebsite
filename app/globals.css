@@ -1,13 +1,16 @@
 
 *{
+  /* border: 1px solid green; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+.navbar{
+  background-color: #000;
+}
 .navbar a{
   text-decoration: none;
-  color: black;
+  color: white;
   position: relative;
   padding: 0.1rem;
 }
@@ -15,7 +18,7 @@
 .navbar a:last-child{
   background-color: #000;
   color: #fff;
-  border: none;
+  border: 1px solid white;
   padding: 0.3rem;
   border-radius: 5px;
   cursor: pointer;

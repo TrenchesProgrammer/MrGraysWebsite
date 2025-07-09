@@ -6,12 +6,12 @@ import '@mantine/core/styles.css';
 const Navbar = () => {
   return (
     <>
-            <Flex h={'5rem'} justify={'space-around'}  gap={'lg'} className='navbar'>
-                <Box>
+            <Flex h={'4rem'} justify={'space-around'}  gap={'lg'} className='navbar'>
+                <Box c={'white'} >
                     <h2 >MR GRAY'S</h2>
                     <h5  >TATTOO STUDIO</h5>
                 </Box>
-                <Flex  h={'65%'} w={'80%'} style={{borderRadius:'10px'}}  justify={'space-around'} gap={'40px'} align={'center'} bg={'#000'}>
+                <Flex   style={{borderRadius:'10px'}}   gap={'20px'} align={'center'} >
                   <Link href=''>
                     <Text >Home</Text>
                   </Link>
@@ -22,7 +22,7 @@ const Navbar = () => {
                     <Text >Our Artists</Text>
                   </Link>
                   <Link href=''>
-                    <Text >Frequently Asked Questions</Text>
+                    <Text >FAQ</Text>
                   </Link>
                   <Link href=''>
                     <Text >Contact</Text>
