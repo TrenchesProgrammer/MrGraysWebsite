@@ -19,7 +19,11 @@ const Page = () => {
       <Navbar />
       <Flex h={"90vh"} bg={"black"} gap={'7px'}>
         <Flex direction={"column"} flex={1} gap={"7px"}>
-          <Box h={"33%"} bg={"#fff"}></Box>
+          <Box h={"33%"} bg={"#fff"}>
+            <Box style={{width:'100%', height:'100%', position:'relative'}}>
+              <Image alt="mr gray tatto0 sample" fill src='/tattoo-sample-1.svg'/>
+            </Box>
+          </Box>
           <Box h={"33%"} bg={"#fff"}></Box>
           <Box h={"33%"} bg={"#fff"}></Box>
         </Flex>
