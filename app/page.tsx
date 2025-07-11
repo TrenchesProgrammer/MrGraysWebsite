@@ -3,7 +3,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import "../app/globals.css";
-import { Flex, Text, Box } from "@mantine/core";
+import { Flex, Box } from "@mantine/core";
 import { Archivo_Black } from "next/font/google";
 import Image from "next/image";
 
