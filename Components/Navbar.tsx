@@ -6,7 +6,7 @@ import '@mantine/core/styles.css';
 const Navbar = () => {
   return (
     <>
-            <Flex h={'4rem'} justify={'space-between'}  gap={'lg'} className='navbar'>
+            <Flex h={'4.5rem'} justify={'space-between'}  gap={'lg'} className='navbar'>
                 <Box pl={'2rem'} c={'white'} >
                     <h2 >MR GRAY'S</h2>
                     <h5  >TATTOO STUDIO</h5>
