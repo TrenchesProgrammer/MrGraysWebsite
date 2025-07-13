@@ -53,4 +53,35 @@
   height: 100%;
   object-fit: cover;
   border-radius: 6%;
+  filter: brightness(0.3);
 }
+        @keyframes scrollUp {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(-50%);
+          }
+        }
+
+        @keyframes scrollDown {
+          0% {
+            transform: translateY(-50%);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+
+        .hero-gallery-container {
+          border-radius: 8px;
+          overflow: hidden;
+        }
+
+        .hero-gallery-container img {
+          transition: transform 0.3s ease;
+        }
+
+        .hero-gallery-container:hover img {
+          transform: scale(1.05);
+        }
