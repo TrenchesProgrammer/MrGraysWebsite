@@ -1,68 +1,31 @@
 "use client";
 import React from "react";
 import Navbar from "../Components/Navbar";
+import ScrollingColumn from "../Components/ScrollingColumn";
 import "../app/globals.css";
 import { Flex, Box } from "@mantine/core";
-import { Archivo_Black } from "next/font/google";
+import { Bodoni_Moda, Poppins } from "next/font/google";
+import { IconMapPin } from "@tabler/icons-react";
 import Image from "next/image";
 
-const archivoBlack = Archivo_Black({
+const bodoniModa = Bodoni_Moda({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+const poppins = Poppins({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
 
-// Reusable ScrollingColumn component
-const ScrollingColumn = ({ images, direction = "up", speed = 20 }) => {
-  const animationName = direction === "up" ? "scrollUp" : "scrollDown";
-  const animationDuration = `${speed}s`;
-
-  return (
-    <Flex 
-      direction="column" 
-      flex={1} 
-      gap="9px"
-      style={{
-        overflow: "hidden",
-        height: "100vh",
-      }}
-    >
-      <Box
-        style={{
-          animation: `${animationName} ${animationDuration} linear infinite`,
-          display: "flex",
-          flexDirection: "column",
-          gap: "9px",
-        }}
-      >
-        {/* Render images twice for seamless loop */}
-        {[...images, ...images].map((src, index) => (
-          <Box
-            key={index}
-            className="hero-gallery-container"
-            h="34vh"
-            style={{
-              flexShrink: 0,
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
-            <Image
-              alt={`mr gray tattoo sample ${index + 1}`}
-              fill
-              style={{ objectFit: "cover" }}
-              src={src}
-            />
-          </Box>
-        ))}
-      </Box>
-    </Flex>
-  );
-};
-
 const Page = () => {
   // Gallery data organized by columns
-  const galleryColumns = [
+  const galleryColumns: {
+    images: string[];
+    direction: "up" | "down";
+    speed: number;
+  }[] = [
     {
       images: [
         "/tattoo-sample-1.svg",
@@ -104,7 +67,17 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <Flex pos={'relative'} pt="4.5rem" bg="black" gap="9px" style={{ height: "100vh", overflow: "hidden" }}>
+      <Flex
+        pos={"relative"}
+        pt="4.5rem"
+        bg="black"
+        gap="9px"
+        style={{
+          height: "100vh",
+          overflow: "hidden",
+          // border: "1px solid green",
+        }}
+      >
         {galleryColumns.map((column, index) => (
           <ScrollingColumn
             key={index}
@@ -113,21 +86,79 @@ const Page = () => {
             speed={column.speed}
           />
         ))}
+
+        {/* <Box
+          h={"10px"}
+          w={"100%"}
+          style={{
+            boxShadow: "20px 0px 30px #000",
+            backgroundColor: "#000",
+            position: "absolute",
+            bottom: "0",
+          }}
+        ></Box> */}
+        <Box
+          h={"250px"}
+          style={{ position: "absolute", borderRadius: "10px" }}
+          bottom={10}
+          left={10}
+          p={10}
+          w={"200px"}
+          bg={"#00000086"}
+          c={"#fff"}
+        >
+          <Flex gap={'sm'}>
+            <IconMapPin />
+            <p>Magnolia, Tx</p>
+          </Flex>
+
+          <h4>OPEN</h4>
+          <p>Tuesday - Thursday</p>
+          <p>12pm - 10pm</p>
+          <p>Friday - Saturday</p>
+          <p>12pm - 10pm</p>
+
+          <h4>CLOSED</h4>
+          <p>Sunday - Monday</p>
+        </Box>
         <Flex
           direction="column"
-          justify="center"
+          top={"20%"}
+          // justify="center"
           align="center"
-          style={{ flex: 1, color: "white", position:'absolute', width:'100%', height:'100%',  fontFamily: archivoBlack.style.fontFamily }}
+          style={{
+            flex: 1,
+            color: "white",
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            fontFamily: bodoniModa.style.fontFamily,
+          }}
         >
-          <h1 style={{ fontSize: "3rem", marginBottom: "1rem", boxShadow: '20px 20px 20px 20px 30px #000' }}>Mr. Gray Tattoo</h1>
-          <p style={{ fontSize: "1.5rem", textAlign: "center" }}>
+          <p
+            style={{
+              fontSize: "5rem",
+              boxShadow: "20px 20px 20px 20px 30px #000",
+            }}
+          >
+            Mr. Gray's Tattoo Studio
+          </p>
+          <p
+            style={{
+              fontSize: "1rem",
+              textAlign: "center",
+              fontFamily: poppins.style.fontFamily,
+            }}
+          >
             Bringing your tattoo dreams to life with precision and artistry.
           </p>
+          <Flex>
+              
+          </Flex>
         </Flex>
-        <Box h={'10px'} w={'100%'} style={{boxShadow: '20px 0px 30px #000', backgroundColor:'#000', position:'absolute', bottom:'0',}}></Box>
       </Flex>
 
-
+      <Box>dgghh</Box>
     </>
   );
 };
