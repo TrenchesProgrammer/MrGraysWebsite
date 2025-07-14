@@ -22,8 +22,9 @@
 .navbar a:last-child{
   background-color: #000;
   color: #fff;
+  font-size: 0.85rem;
   border: 1px solid white;
-  padding: 0.3rem;
+  padding: 0.45rem;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -85,3 +86,21 @@
         .hero-gallery-container:hover img {
           transform: scale(1.05);
         }
+
+.hero a{
+  text-decoration: none;
+  color: #000;
+  background-color: #fff;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+  /* border: 1.5px solid white; */
+}
+.hero a:last-child{
+  text-decoration: none;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: transparent;
+  color: #fff;
+  border: 1.5px solid white;
+}

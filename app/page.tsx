@@ -7,6 +7,7 @@ import { Flex, Box } from "@mantine/core";
 import { Bodoni_Moda, Poppins } from "next/font/google";
 import { IconMapPin } from "@tabler/icons-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const bodoniModa = Bodoni_Moda({
   weight: "400",
@@ -72,10 +73,10 @@ const Page = () => {
         pt="4.5rem"
         bg="black"
         gap="9px"
+        className="hero"
         style={{
           height: "100vh",
           overflow: "hidden",
-          // border: "1px solid green",
         }}
       >
         {galleryColumns.map((column, index) => (
@@ -87,16 +88,6 @@ const Page = () => {
           />
         ))}
 
-        {/* <Box
-          h={"10px"}
-          w={"100%"}
-          style={{
-            boxShadow: "20px 0px 30px #000",
-            backgroundColor: "#000",
-            position: "absolute",
-            bottom: "0",
-          }}
-        ></Box> */}
         <Box
           h={"250px"}
           style={{ position: "absolute", borderRadius: "10px" }}
@@ -107,7 +98,7 @@ const Page = () => {
           bg={"#00000086"}
           c={"#fff"}
         >
-          <Flex gap={'sm'}>
+          <Flex gap={"sm"}>
             <IconMapPin />
             <p>Magnolia, Tx</p>
           </Flex>
@@ -124,6 +115,7 @@ const Page = () => {
         <Flex
           direction="column"
           top={"20%"}
+          gap={'50px'}
           // justify="center"
           align="center"
           style={{
@@ -135,25 +127,32 @@ const Page = () => {
             fontFamily: bodoniModa.style.fontFamily,
           }}
         >
-          <p
-            style={{
-              fontSize: "5rem",
-              boxShadow: "20px 20px 20px 20px 30px #000",
-            }}
-          >
-            Mr. Gray's Tattoo Studio
-          </p>
-          <p
-            style={{
-              fontSize: "1rem",
-              textAlign: "center",
-              fontFamily: poppins.style.fontFamily,
-            }}
-          >
-            Bringing your tattoo dreams to life with precision and artistry.
-          </p>
-          <Flex>
-              
+          <Box>
+            <p
+              style={{
+                fontSize: "4.5rem",
+                boxShadow: "20px 20px 20px 20px 30px #000",
+              }}
+            >
+              MR GRAY'S TATTOO STUDIO
+            </p>
+            <p
+              style={{
+                fontSize: "1rem",
+                textAlign: "center",
+                fontFamily: poppins.style.fontFamily,
+              }}
+            >
+              Bringing your tattoo dreams to life with precision and artistry.
+            </p>
+          </Box>
+          <Flex gap={"10px"}>
+            <Link className={poppins.className} href="/book-appointment">
+              OUR ARTISTS
+            </Link>
+            <Link className={poppins.className} href="/book-appointment">
+              GET TATTOOED
+            </Link>
           </Flex>
         </Flex>
       </Flex>
