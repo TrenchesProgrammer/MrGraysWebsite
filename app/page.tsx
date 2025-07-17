@@ -3,11 +3,11 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import ScrollingColumn from "../Components/ScrollingColumn";
 import "../app/globals.css";
-import { Flex, Box } from "@mantine/core";
+import { Flex, Box, Text } from "@mantine/core";
 import { Bodoni_Moda, Poppins } from "next/font/google";
 import { IconMapPin } from "@tabler/icons-react";
-import Image from "next/image";
 import Link from "next/link";
+import {useMediaQuery } from '@mantine/hooks'
 
 const bodoniModa = Bodoni_Moda({
   weight: "400",
@@ -114,7 +114,7 @@ const Page = () => {
         </Box>
         <Flex
           direction="column"
-          top={"20%"}
+          top={"25%"}
           gap={'50px'}
           // justify="center"
           align="center"
@@ -130,8 +130,7 @@ const Page = () => {
           <Box>
             <p
               style={{
-                fontSize: "4.5rem",
-                boxShadow: "20px 20px 20px 20px 30px #000",
+                fontSize: "clamp(2rem, 5vw, 10rem)",
               }}
             >
               MR GRAY'S TATTOO STUDIO
@@ -156,8 +155,11 @@ const Page = () => {
           </Flex>
         </Flex>
       </Flex>
+      <Flex className="about">
+        <Text>About Us</Text>
+      </Flex>
 
-      <Box>dgghh</Box>
+  
     </>
   );
 };
