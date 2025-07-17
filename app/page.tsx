@@ -7,7 +7,7 @@ import { Flex, Box, Text } from "@mantine/core";
 import { Bodoni_Moda, Poppins } from "next/font/google";
 import { IconMapPin } from "@tabler/icons-react";
 import Link from "next/link";
-import {useMediaQuery } from '@mantine/hooks'
+
 
 const bodoniModa = Bodoni_Moda({
   weight: "400",
@@ -137,7 +137,7 @@ const Page = () => {
             </p>
             <p
               style={{
-                fontSize: "1rem",
+                fontSize: "clamp(0.8rem, 2vw, 1.2rem)",
                 textAlign: "center",
                 fontFamily: poppins.style.fontFamily,
               }}
