@@ -130,6 +130,7 @@ const Page = () => {
           <Box>
             <p
               style={{
+                textAlign: "center",
                 fontSize: "clamp(2rem, 5vw, 10rem)",
               }}
             >
