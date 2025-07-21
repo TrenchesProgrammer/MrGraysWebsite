@@ -149,8 +149,8 @@ const Page = () => {
               Bringing your tattoo dreams to life with precision and artistry.
             </p>
           </Box>
-          <Flex gap={"10px"}>
-            <Link className={poppins.className} href="/book-appointment">
+          <Flex direction={mobile ? "column" : "row"} gap={"10px"}>
+            <Link  className={poppins.className} href="/book-appointment">
               OUR ARTISTS
             </Link>
             <Link className={poppins.className} href="/book-appointment">
@@ -158,12 +158,7 @@ const Page = () => {
             </Link>
           </Flex>
         </Flex>
-      </Flex>
-      <Flex className="about">
-        <Text>About Us</Text>
-      </Flex>
-
-  
+      </Flex>  
     </>
   );
 };

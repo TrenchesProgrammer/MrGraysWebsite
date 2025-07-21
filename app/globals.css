@@ -111,3 +111,11 @@ body{
   color: #fff;
   border: 1.5px solid white;
 }
+
+@media screen and (max-width: 768px) {
+  .hero a{
+  width: 85vw;
+  text-align: center;
+  padding: 10px 30px 10px 30px;
+}
+}
