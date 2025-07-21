@@ -70,7 +70,6 @@ const Page = () => {
 
   return (
     <>
-      <Navbar />
       <Flex
         pos={"relative"}
         pt="4.5rem"
@@ -153,7 +152,7 @@ const Page = () => {
             <Link  className={poppins.className} href="/book-appointment">
               OUR ARTISTS
             </Link>
-            <Link className={poppins.className} href="/book-appointment">
+            <Link className={poppins.className} href="/get-tattooed">
               GET TATTOOED
             </Link>
           </Flex>

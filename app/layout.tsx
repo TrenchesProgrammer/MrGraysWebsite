@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MantineProvider } from "@mantine/core";
 import { Poppins } from "next/font/google";
+import Navbar from "@/Components/Navbar";
 // const graduate = Graduate({ weight: "400", subsets: ["latin"], display: "swap" });
 const poppins = Poppins({ weight: "400", subsets: ["latin"], display: "swap" });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <MantineProvider>
+          <Navbar />
           {children}
         </MantineProvider>
       </body>
