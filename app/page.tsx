@@ -6,6 +6,8 @@ import "../app/globals.css";
 import { Flex, Box, Text } from "@mantine/core";
 import { Bodoni_Moda, Poppins } from "next/font/google";
 import { IconMapPin } from "@tabler/icons-react";
+import { useMediaQuery} from "@mantine/hooks";
+
 import Link from "next/link";
 
 
@@ -21,6 +23,7 @@ const poppins = Poppins({
 });
 
 const Page = () => {
+    const mobile = useMediaQuery("(max-width: 768px)");
   // Gallery data organized by columns
   const galleryColumns: {
     images: string[];
@@ -79,7 +82,7 @@ const Page = () => {
           overflow: "hidden",
         }}
       >
-        {galleryColumns.map((column, index) => (
+        {galleryColumns.slice(0, mobile ? 2: galleryColumns.length).map((column, index) => (
           <ScrollingColumn
             key={index}
             images={column.images}
