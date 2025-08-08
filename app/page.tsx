@@ -7,9 +7,7 @@ import { Flex, Box, Text } from "@mantine/core";
 import { Bodoni_Moda, Poppins } from "next/font/google";
 import { IconMapPin } from "@tabler/icons-react";
 import { useMediaQuery} from "@mantine/hooks";
-
 import Link from "next/link";
-
 
 const bodoniModa = Bodoni_Moda({
   weight: "400",
