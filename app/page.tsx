@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import ScrollingColumn from "../Components/ScrollingColumn";
 import "../app/globals.css";
-import { Flex, Box, Text } from "@mantine/core";
+import { Flex, Box} from "@mantine/core";
 import { Bodoni_Moda, Poppins } from "next/font/google";
 import { IconMapPin } from "@tabler/icons-react";
 import { useMediaQuery} from "@mantine/hooks";

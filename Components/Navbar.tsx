@@ -5,6 +5,7 @@ import { Box, Flex, Text, Burger, Drawer, Stack, CloseButton } from "@mantine/co
 import Link from "next/link";
 import "@mantine/core/styles.css";
 import { Bodoni_Moda } from "next/font/google";
+import {usePathname} from "next/navigation";
 import { useMediaQuery, useDisclosure } from "@mantine/hooks";
 
 const bodoniModa = Bodoni_Moda({
@@ -15,7 +16,8 @@ const bodoniModa = Bodoni_Moda({
 
 const Navbar = () => {
   const mobile = useMediaQuery("(max-width: 768px)");
-  
+  const pathname = usePathname();
+  console.log(pathname)
   const MobileNav = () => {
     const [opened, { toggle, close }] = useDisclosure();
     
@@ -66,7 +68,7 @@ const Navbar = () => {
           }}
         >
           <Stack p="md">
-            <Link href="" onClick={close} style={{ textDecoration: 'none' }}>
+            <Link href="/about" onClick={close} style={{ textDecoration: 'none' }}>
               <Text c="white" size="lg" py="sm" style={{ borderBottom: '1px solid #333' }}>
                 About
               </Text>
@@ -127,10 +129,10 @@ const Navbar = () => {
             align={"center"}
             pr={"2rem"}
           >
-            <Link href="">
+            <Link href="/">
               <Text c="white">Home</Text>
             </Link>
-            <Link href="">
+            <Link href="/about">
               <Text c="white">About</Text>
             </Link>
             <Link href="">
@@ -145,8 +147,7 @@ const Navbar = () => {
             <Link href="">
               <Box
                 style={{
-                  backgroundColor: '#ff4444',
-                  padding: '8px 16px',
+                  padding: '3px 10px',
                   borderRadius: '6px',
                 }}
               >
