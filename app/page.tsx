@@ -70,12 +70,12 @@ const Page = () => {
     <>
       <Flex
         pos={"relative"}
-        pt="4.5rem"
+        // pt="4.5rem"
         bg="black"
         gap="9px"
         className="hero"
         style={{
-          height: "100vh",
+          height: "92vh",
           overflow: "hidden",
         }}
       >

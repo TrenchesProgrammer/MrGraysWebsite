@@ -45,14 +45,8 @@ const Navbar = () => {
           opened={opened}
           onClose={close}
           position="right"
-          size="300px"
+          size="260px"
           padding="md"
-          title={
-            <Box className={bodoniModa.className}>
-              <Text size="lg" fw={600}>MR GRAY'S</Text>
-              <Text size="sm">TATTOO STUDIO</Text>
-            </Box>
-          }
           styles={{
             header: {
               backgroundColor: '#1a1a1a',
