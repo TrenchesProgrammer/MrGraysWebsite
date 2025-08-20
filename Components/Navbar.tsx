@@ -138,7 +138,7 @@ const Navbar = () => {
             <Link href="">
               <Text c="white">Contact</Text>
             </Link>
-            <Link href="">
+            <Link href="/get-tattooed">
               <Box
                 style={{
                   padding: '3px 10px',

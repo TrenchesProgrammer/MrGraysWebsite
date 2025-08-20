@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is the purpose of this application?",
+        "answer": "This application is designed to help users manage their tasks efficiently."
+    },
+    {
+        "question": "How do I create a new task?",
+        "answer": "To create a new task, click on the 'Add Task' button, fill in the details, and save it."
+    },
+    {
+        "question": "Can I edit an existing task?",
+        "answer": "Yes, you can edit any existing task by clicking on it and selecting the 'Edit' option."
+    },
+    {
+        "question": "Is there a way to delete tasks?",
+        "answer": "Absolutely! You can delete tasks by selecting them and clicking on the 'Delete' button."
+    },
+    {
+        "question": "How do I mark a task as completed?",
+        "answer": "To mark a task as completed, simply check the box next to the task name."
+    }
+]

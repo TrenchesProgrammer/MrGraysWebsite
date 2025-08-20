@@ -9,6 +9,7 @@ import { IconMapPin } from "@tabler/icons-react";
 import { useMediaQuery } from "@mantine/hooks";
 import Link from "next/link";
 import Image from "next/image";
+import Faq from "../Components/Faq";
 
 const bodoniModa = Bodoni_Moda({
   weight: "400",
@@ -197,13 +198,7 @@ const Page = () => {
 
       </div>
       <div>
-        <h1 className={bodoniModa.className} style={{ textAlign: "center" }}>
-          Frequently Asked Questions
-        </h1>
-        <p>
-          Have questions about our services, pricing, or the tattoo process?
-          Check out our FAQ section for answers to common inquiries.
-        </p>
+        <Faq bodoniModa={bodoniModa.className} />
       </div>
     </div>
   );
