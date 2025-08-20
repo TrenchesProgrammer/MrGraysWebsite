@@ -3,11 +3,12 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import ScrollingColumn from "../Components/ScrollingColumn";
 import "../app/globals.css";
-import { Flex, Box} from "@mantine/core";
+import { Flex, Box } from "@mantine/core";
 import { Bodoni_Moda, Poppins } from "next/font/google";
 import { IconMapPin } from "@tabler/icons-react";
-import { useMediaQuery} from "@mantine/hooks";
+import { useMediaQuery } from "@mantine/hooks";
 import Link from "next/link";
+import Image from "next/image";
 
 const bodoniModa = Bodoni_Moda({
   weight: "400",
@@ -21,7 +22,7 @@ const poppins = Poppins({
 });
 
 const Page = () => {
-    const mobile = useMediaQuery("(max-width: 768px)");
+  const mobile = useMediaQuery("(max-width: 768px)");
   // Gallery data organized by columns
   const galleryColumns: {
     images: string[];
@@ -67,7 +68,7 @@ const Page = () => {
   ];
 
   return (
-    <>
+    <div style={{ backgroundColor: "#000", color: "#fff" }}>
       <Flex
         pos={"relative"}
         // pt="4.5rem"
@@ -79,14 +80,16 @@ const Page = () => {
           overflow: "hidden",
         }}
       >
-        {galleryColumns.slice(0, mobile ? 2: galleryColumns.length).map((column, index) => (
-          <ScrollingColumn
-            key={index}
-            images={column.images}
-            direction={column.direction}
-            speed={column.speed}
-          />
-        ))}
+        {galleryColumns
+          .slice(0, mobile ? 2 : galleryColumns.length)
+          .map((column, index) => (
+            <ScrollingColumn
+              key={index}
+              images={column.images}
+              direction={column.direction}
+              speed={column.speed}
+            />
+          ))}
 
         <Box
           h={"250px"}
@@ -115,7 +118,7 @@ const Page = () => {
         <Flex
           direction="column"
           top={"25%"}
-          gap={'50px'}
+          gap={"50px"}
           // justify="center"
           align="center"
           style={{
@@ -147,7 +150,7 @@ const Page = () => {
             </p>
           </Box>
           <Flex direction={mobile ? "column" : "row"} gap={"10px"}>
-            <Link  className={poppins.className} href="/book-appointment">
+            <Link className={poppins.className} href="/book-appointment">
               OUR ARTISTS
             </Link>
             <Link className={poppins.className} href="/get-tattooed">
@@ -155,8 +158,54 @@ const Page = () => {
             </Link>
           </Flex>
         </Flex>
-      </Flex>  
-    </>
+      </Flex>
+      <div style={{ marginTop: "50px" }}>
+        <h1 className={bodoniModa.className} style={{ textAlign: "center" }}>
+          About Us
+        </h1>
+        <Flex justify="space-around">
+          <div>
+            <p>Welcome to Mr. Gray's Tattoo Studio, where art meets skin.</p>
+            <p>
+              Our studio is dedicated to providing a unique and personalized
+              tattoo experience.
+            </p>
+            <p>
+              With a team of skilled artists, we bring your ideas to life with
+              precision and creativity.
+            </p>
+            <p>
+              Whether you're looking for a small design or a full sleeve, we are
+              here to help you every step of the way.
+            </p>
+          </div>
+          <div>
+            <Image
+              src="/tattoo-studio.webp"
+              alt=""
+              style={{ borderRadius: "20px" }}
+              height={400}
+              width={540}
+            />
+          </div>
+        </Flex>
+      </div>
+      <div>
+        <h1 className={bodoniModa.className} style={{ textAlign: "center" }}>
+          Our Artists
+        </h1>
+
+      </div>
+      <div>
+        <h1 className={bodoniModa.className} style={{ textAlign: "center" }}>
+          Frequently Asked Questions
+        </h1>
+        <p>
+          Have questions about our services, pricing, or the tattoo process?
+          Check out our FAQ section for answers to common inquiries.
+        </p>
+      </div>
+    </div>
   );
 };
 
