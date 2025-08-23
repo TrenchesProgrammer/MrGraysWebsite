@@ -161,11 +161,10 @@ const Page = () => {
         </Flex>
       </Flex>
       <div style={{ marginTop: "50px" }}>
-        <h1 className={bodoniModa.className} style={{ textAlign: "center" }}>
-          About Us
-        </h1>
         <Flex justify="space-around" direction={mobile ? "column-reverse" : "row"}>
-          <div>
+          <div style={{maxWidth:'400px'}}>
+            <p>About Us</p>
+            <h1 className={bodoniModa.className}>Mr Gray's Tattoo Studio</h1>
             <p>Welcome to Mr. Gray's Tattoo Studio, where art meets skin.</p>
             <p>
               Our studio is dedicated to providing a unique and personalized
