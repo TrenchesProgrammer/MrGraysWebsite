@@ -164,7 +164,7 @@ const Page = () => {
         <h1 className={bodoniModa.className} style={{ textAlign: "center" }}>
           About Us
         </h1>
-        <Flex justify="space-around">
+        <Flex justify="space-around" direction={mobile ? "column-reverse" : "row"}>
           <div>
             <p>Welcome to Mr. Gray's Tattoo Studio, where art meets skin.</p>
             <p>
@@ -184,9 +184,11 @@ const Page = () => {
             <Image
               src="/tattoo-studio.webp"
               alt=""
-              style={{ borderRadius: "20px" }}
-              height={400}
-              width={540}
+              // style={{ borderRadius: "10px" }}
+              width={mobile ? 410 : 540}
+              height={mobile ? 300 : 400}
+              // height={400}
+              // width={540}
             />
           </div>
         </Flex>

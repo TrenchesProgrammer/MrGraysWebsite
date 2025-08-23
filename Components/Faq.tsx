@@ -11,7 +11,7 @@ type FaqProps ={
 const Faq = ({bodoniModa}: FaqProps) => {
   const mobile = useMediaQuery("(max-width: 868px)");
   return (
-    <div style={{backgroundColor: "#1a1a1a", padding: "20px", width: "80%", margin:'auto', borderRadius: "10px"}}>
+    <div style={{ padding: "20px",  margin:'auto', borderRadius: "10px"}}>
       <Flex direction={mobile ? "column" : "row"} >
         <h1 className={bodoniModa} style={{ textAlign: "left" }}>
           Frequently Asked Questions

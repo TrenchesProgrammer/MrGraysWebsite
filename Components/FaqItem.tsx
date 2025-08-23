@@ -14,7 +14,7 @@ const FaqItem = ({question, answer}: FaqItemProps) => {
   return (
     <div className="faq-item" onClick={handleToggleOpen}>
       <Flex justify={"space-between"}>
-        <h3 className="faq-question">{question}</h3>
+        <p className="faq-question">{question}</p>
         <IconPlus
           style={{
             transform: open ? "rotate(45deg)" : "rotate(0deg)",
@@ -24,7 +24,7 @@ const FaqItem = ({question, answer}: FaqItemProps) => {
         />
       </Flex>
       {open && (
-        <p className="faq-answer">
+        <p style={{fontSize:'14px'}} className="faq-answer">
           {answer}
         </p>
       )}

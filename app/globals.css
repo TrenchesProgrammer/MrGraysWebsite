@@ -122,10 +122,10 @@
 }
 .faq-item {
   /* background-color: #000000; */
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0.5px solid #979797c0;
   /* border-radius: 5px; */
   padding: 15px;
-  width: 75%;
+  width: 100%;
   cursor: pointer;
   margin: auto;
   margin-bottom: 10px;
