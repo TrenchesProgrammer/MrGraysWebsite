@@ -1,22 +1,22 @@
-[
+ [
     {
-        "question": "What is the purpose of this application?",
-        "answer": "This application is designed to help users manage their tasks efficiently."
+        "question": "Are tattoos painful?",
+        "answer": "Pain varies from person to person and on any given day but yes they cause pain. It can be compared to scratching a sunburn. The best thing to do is come rested, make sure to drink plenty of water and eat before you arrive."
     },
     {
-        "question": "How do I create a new task?",
-        "answer": "To create a new task, click on the 'Add Task' button, fill in the details, and save it."
+        "question": "When are appointments booked?",
+        "answer": "We book tattoo appointments Tuesdays through Saturdays starting at 1PM. In-person consultations are booked before those between 12PM and 1PM depending on availability and schedule. We will provide options in our first response to your inquiry."
     },
     {
-        "question": "Can I edit an existing task?",
-        "answer": "Yes, you can edit any existing task by clicking on it and selecting the 'Edit' option."
+        "question": "How much will the tattoo cost?",
+        "answer": "The hourly rate for tattooing is $100 – $250 per hour, depending on which artist you choose. Your specific tattoo price will depend on factors such as size, placement, complexity of design, and how many sittings it takes to complete it. Payment in full will be due at the end of each session. (Remember the nonrefundable/nontransferable deposit paid during your consultation is applied to the final cost of your tattoo.) We accept cash and credit cards however, there is a fee for processing through credit."
     },
     {
-        "question": "Is there a way to delete tasks?",
-        "answer": "Absolutely! You can delete tasks by selecting them and clicking on the 'Delete' button."
+        "question": "Do I get a drawing of my tattoo prior to my appointment?",
+        "answer": "No, sketches and drawings are not shared until ready to use on the first appointment"
     },
     {
-        "question": "How do I mark a task as completed?",
-        "answer": "To mark a task as completed, simply check the box next to the task name."
+        "question": "Can an old tattoo be fixed or covered?",
+        "answer": "We are happy to touch up, or rework an old tattoo. However, not every tattoo is ideal for fixing or covering so we would schedule a consultation to determine whether this is possible"
     }
 ]

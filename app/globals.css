@@ -126,6 +126,7 @@
   /* border-radius: 5px; */
   padding: 15px;
   width: 75%;
+  cursor: pointer;
   margin: auto;
   margin-bottom: 10px;
 } 

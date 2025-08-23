@@ -1,21 +1,25 @@
 import React from "react";
 import FaqItem from "./FaqItem";
 import {Flex} from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+import { useEffect } from "react";
+import data from '../app/faq.json'
 type FaqProps ={
   bodoniModa: string;
 }
+
 const Faq = ({bodoniModa}: FaqProps) => {
+  const mobile = useMediaQuery("(max-width: 868px)");
   return (
     <div style={{backgroundColor: "#1a1a1a", padding: "20px", width: "80%", margin:'auto', borderRadius: "10px"}}>
-      <Flex>
-        <h1 className={bodoniModa} style={{ textAlign: "center" }}>
+      <Flex direction={mobile ? "column" : "row"} >
+        <h1 className={bodoniModa} style={{ textAlign: "left" }}>
           Frequently Asked Questions
         </h1>
         <div style={{width:'100%'}}>
-          <FaqItem />
-          <FaqItem />
-          <FaqItem />
-          <FaqItem />
+          {data.map((item, index) => (
+            <FaqItem key={index} answer = {item.answer} question = {item.question}  />
+          ))}
         </div>
       </Flex>
     </div>
